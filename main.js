@@ -6,10 +6,8 @@ const btnCripto = document.querySelector('.btn--cripto')
 const btnDescripto = document.querySelector('.btn--descripto')
 const btnCopy = document.querySelector('.btn-copy')
 
-const key = "key"
-
 /* Encrypts a given text using a simple hexadecimal encoding. */
-function encrypt(text, key) {
+function encrypt(text) {
   let cryptText = ''
   for (i=0; i < text.length; i++) {
     let char = text[i]
@@ -23,7 +21,7 @@ function encrypt(text, key) {
 }
 
 /* Decrypts a given hexadecimal encoded text using a simple hexadecimal decoding. */
-function decrypt(text, key) {
+function decrypt(text) {
   const newText = text.replace(/\s/g, '')
   let decryptText = ''
   for (i=0; i < newText.length; i+=2) {
