@@ -22,10 +22,11 @@ button {
   color: var(--basic-color);
 }
 
-.btn-active {
+.btn-copy {
   margin-top: 2.4rem;
   display: none;
   padding: 1.5rem 0;
+  bottom: 2rem;
 }
 
 @media (min-width:860px) {

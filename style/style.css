@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 @import url(button.css);
+@import url(section-input..css);
+@import url(section-output.css);
 
 * {
   box-sizing: border-box;
@@ -31,123 +33,9 @@ main {
   height: 100vh;
 }
 
-section#input {
-  height: 100%;
-}
+@media (min-width:560px) { main {padding: 2rem;} }
 
-section#input h1 {
-  height: 5rem;
-  font-size: 4rem;
-  font-weight: 700;
-  color: var(--primary-color);
-  margin-bottom: 2rem;
-}
-
-section#input form {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: calc(100% - 10rem);
-}
-
-section#input form textarea {
-  width: 100%;
-  height: 100%;
-  border: none;
-  outline: none;
-  background-color: transparent;
-  color: var(--text-color);
-  font-size: 2rem;
-  font-family: inherit;    
-  font-weight: 500;
-  padding: 1rem;
-  resize: none;
-}
-
-section#input form textarea::placeholder {
-  color: var(--primary-color);
-}
-
-section#input div {
-  font-size: 1.4rem;
-}
-
-section#input span {
-  font-size: 1.2rem;
-  width: 2rem;
-  height: 2rem;
-  border-radius: 50%;
-  background-color: var(--primary-color);
-  color: var(--basic-color);
-  
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: .5rem;
-}
-
-section#output {
-  background-color: var(--basic-color);
-  padding: 2rem;
-  border-radius: 2.4rem;
-  text-align: center;
-  margin-bottom: 2rem;
-  box-shadow: 0px 4px 4px 2px rgba(0, 0, 0, 0.1);
-}
-
-section#output img {
-  display: none;
-}
-
-section#output h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: var(--text-color);
-}
-
-section#output p {
-  font-size: 1.6rem;
-  margin-bottom: 1rem;
-  color: var(--text-color);
-}
-
-@media (min-width:560px) {
-  main {
-    padding: 2rem;
-  }
-}
-
-@media (min-width:864px) {
-  main {
-    flex-direction: row;
-  }
-
-  section#input {
-    flex: 2;
-    position: relative;
-  }
-
-  section#input form {
-    width: 500px;
-    justify-self: right;
-    right: 5rem;
-    position: absolute;
-  }
-
-  section#output {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    flex: 1;
-    max-width: 30%;
-  }
-
-  section#output img {
-    display: block;
-    margin-bottom: 2rem;
-    width: 100%;
-  }
-}
+@media (min-width:864px) { main { flex-direction: row; }}
 
 @media (min-width:1024px) {
   body {
@@ -155,17 +43,6 @@ section#output p {
     display: flex;
     justify-content: center;
   }
-  main {
-    width: 1400px;
-  }
 
-  section#input form {
-    width: 65rem;
-  }
-}
-
-@media (min-width:1260px) {
-  section#input form {
-    width: 80rem;
-  }
+  main { width: 1400px; }
 }

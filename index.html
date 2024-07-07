@@ -18,19 +18,24 @@
           </div>
           <div class="wrapper__btn">
             <button class="btn--cripto">Criptografar</button>
-            <button>Descriptografar</button>
+            <button class="btn--descripto">Descriptografar</button>
           </div>
         </div>
       </form>
     </section>
     <section id="output">
-      <div class="text__result">
-        <img src="assets/output-image.svg" alt="Imagem de uma pessoa segurando uma lupa e procurando algo.">
-        <h2>Nenhuma mensagem encontrada</h2>
-        <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
+      <div class="wrapper__text">
+        <div id="message" class="show__message">
+          <img src="assets/output-image.svg" alt="Imagem de uma pessoa segurando uma lupa e procurando algo.">
+          <h2>Nenhuma mensagem encontrada</h2>
+          <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
+        </div>
+        <div class="decrypt-area">
+        </div>
       </div>
-      <button class="btn-active">Copiar</button>
+      <button class="btn-copy">Copiar</button>
     </section>
   </main>
+  <script src="main.js"></script>
 </body>
 </html>

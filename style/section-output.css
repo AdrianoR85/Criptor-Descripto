@@ -1,0 +1,82 @@
+section#output {
+  background-color: var(--basic-color);
+  padding: 2rem;
+  border-radius: 2.4rem;
+  margin-bottom: 2rem;
+  box-shadow: 0px 4px 4px 2px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+section#output img {
+  display: none;
+}
+
+section#output h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+section#output p {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+
+section .output__text{
+  text-align: left;
+  width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+section .hidden__message {
+  display: none;
+}
+
+section .show__message {
+  display: block;
+  text-align: center;
+}
+
+@media (min-width:864px) {
+  section#output {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    max-width: 30%;
+  }
+
+  .wrapper__text{
+    flex: 2;
+  }  
+
+  section .output__text {
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  section#output img {
+    display: block;
+    margin-bottom: 2rem;
+    width: 100%;
+  }
+  
+  section#output h2 {
+    font-size: 2.5rem;
+  }
+  section#output p {
+    font-size: 2rem;
+  }
+
+  section .show__message {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
