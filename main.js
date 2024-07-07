@@ -43,7 +43,7 @@ btnCripto.addEventListener('click', (e) => {
     return;
   }
 
-  let enc = encrypt(text, key)
+  let enc = encrypt(text)
 
   if(currentClass){
     message.classList.remove('show__message')
@@ -56,13 +56,15 @@ btnCripto.addEventListener('click', (e) => {
 
   
   changeBtnCopy('Copiar')
+  document.getElementById('text').focus()
 })
 
 /* Decrypts the input text and updates the decryptArea with the decrypted text. */
 btnDescripto.addEventListener('click', (e) => {
   e.preventDefault()
   const text = document.getElementById('text').value
-  let dec = decrypt(text, key)
+  
+  let dec = decrypt(text)
 
   if (text === '') {
     alert('Por favor, insira algum texto no campo.');
@@ -72,6 +74,7 @@ btnDescripto.addEventListener('click', (e) => {
   decryptArea.innerHTML = dec
   document.getElementById('text').value = ''
   changeBtnCopy('Copiar')
+  document.getElementById('text').focus()
 })
 
 /* Adds a click event listener to the copy button, which copies the decrypted text to the clipboard. */
@@ -93,4 +96,6 @@ function changeBtnCopy(btnText) {
     btnCopy.style.backgroundColor = '#ffffff'
     btnCopy.style.color = '#0A3871'
   }
+
+  document.getElementById('text').focus()
 }
