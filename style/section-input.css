@@ -55,7 +55,7 @@ section#input span {
 
 @media (min-width:864px) {
   section#input h1 {
-    font-size: 8rem;
+    font-size: 6rem;
   }
   section#input {
     flex: 2;
